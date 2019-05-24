@@ -26,3 +26,9 @@ change /etc/issue from archlinux to BlackArch
 
 I have yet to make a razer theme.  Plasma I use Breeze Blurred window decs.  Breeze-Darker-Transparent plasma theme. Numix-Circle Icons.  
 
+updated tlp and i915 config.  Benchmark link https://browser.geekbench.com/v4/cpu/13253832
+
+running drm-intel-next-git from AUR.
+
+
+
