@@ -24,7 +24,7 @@ Added net-tuning.conf from blackarch
 
 change /etc/issue from archlinux to BlackArch
 
-Plasma theme uses breeze-blurred-git window decorations, flat-remix icons, breeze-darker-transparent plasma theme.
+Plasma theme uses breeze-blurred-git window decorations, numix-circle icons, breeze-darker-transparent plasma theme.
 
 updated tlp and i915 config.  Benchmark link https://browser.geekbench.com/v4/cpu/13253832
 
