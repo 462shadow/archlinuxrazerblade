@@ -9,7 +9,7 @@ export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_DATA_DIRS="/usr/local/share:/usr/share"
 export XDG_CONFIG_DIRS="/etc/xdg"
 
-
+xrandr --output eDP1 --primary --mode 3200x1800 --dpi 276 &
 
 [ -d /sbin ] && PATH="$PATH:/sbin"
 [ -d /usr/sbin ] && PATH="$PATH:/usr/sbin"
