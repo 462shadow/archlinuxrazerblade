@@ -8,21 +8,27 @@ Plasma settings change font dpi to 150.
 
 X WM use Xft.dpi: 150 in ~/.Xresources
 
-razer settings:
+razer:
   
 --  first install python-notify2 via AUR
   
 --  then install open-razer-meta and polychromatic
   
---  ** must have linux headers installed and add user to plugdev group
-  
-I intstalled blackarch and login with root to  Qtile.  
+--  must have linux headers installed and add user to plugdev group  
 
-I added the exports in the zshrc to easily su user and access AUR.
+installed blackarch
 
-net-tuning.conf is from blackarch
+ -- added exports to zshrc to easily switch to user from root and access AUR
+
+Added net-tuning.conf from blackarch
 
 change /etc/issue from archlinux to BlackArch
 
-I have yet to make a razer theme.  Plasma I use Breeze Blurred window decs.  Breeze-Darker-Transparent plasma theme. Numix-Circle Icons.  
+Plasma theme uses breeze-blurred-git window decorations, numix-circle icons, breeze-darker-transparent plasma theme.
+
+updated tlp and i915 config.  Benchmark link https://browser.geekbench.com/v4/cpu/13253832
+
+running drm-intel-next-git from AUR.
+
+
 
