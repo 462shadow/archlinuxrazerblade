@@ -5,7 +5,7 @@
 
 Matrix Green Theme Qtile widgets
 
-Buttons for networkmanager-demnu, polychromatic-controller, pavucontrol
+Buttons for networkmanager-dmenu, polychromatic-controller, pavucontrol
 
 ![Screenshot](qtile-widgets.png)
 
