@@ -1,1 +1,0 @@
-/home/g3k/.config/qtile/config.py
