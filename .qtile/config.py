@@ -132,6 +132,14 @@ widget_defaults = dict(
 )
 extension_defaults = widget_defaults.copy()
 
+arrow_text = {
+    "text":"",
+    "font":"FontAwesome",
+    "fontsize":58,
+    "padding":-1,
+}
+
+
 screens = [
     Screen(
         top=bar.Bar(
@@ -143,26 +151,75 @@ screens = [
                 widget.Prompt(),
                 widget.Notify(default_timeout=5, font="Hack", fontsize=16),
                 widget.Spacer(),
-                widget.Net(),
-                widget.Wlan(format="--==[ {essid} ]==--"),
-                widget.Sep(),
+                widget.TextBox(
+                    foreground="00cc00",
+                    **arrow_text,
+                    ),
+                widget.Net(
+                    background="00cc00",
+                    foreground="000000",
+                    ),
+                widget.TextBox(
+                    background="00cc00",
+                    foreground="55ff55",
+                    **arrow_text,
+                    ),
+                widget.Wlan(
+                    format="--==[ {essid} ]==--",
+                    background="55ff55",
+                    foreground="000000",
+                    ),
+                widget.TextBox(
+                    foreground="005500",
+                    background="55ff55",
+                    **arrow_text,
+                    ),
+                widget.LaunchBar(
+                    progs=[(" ", "pavucontrol", "volume")],
+                    padding=0,
+                    default_icon=None,
+                    background="005500",
+                    ),
+                widget.Volume(
+                    background="005500",
+                    ),
+                widget.TextBox(
+                    foreground="00cc00",
+                    background="005500",
+                    **arrow_text,
+                    ),
                 widget.Battery(
                     discharge_char=" ",
                     charge_char=" ",
-                    format="{char}{percent:2.0%}"
+                    format="{char}{percent:2.0%}",
+                    background="00cc00",
+                    foreground="000000",
                     ),
-                widget.Sep(),
-                widget.Clock(format='%a %b %d, %I:%M %p'),
-                widget.Sep(),
+                widget.TextBox(
+                    foreground="55ff55",
+                    background="00cc00",
+                    **arrow_text,
+                    ),
+                widget.Clock(
+                    format='%a %b %d, %I:%M %p',
+                    background="55ff55",
+                    foreground="000000",
+                    ),
+                widget.TextBox(
+                    foreground="005500",
+                    background="55ff55",
+                    **arrow_text,
+                    ),
                 widget.LaunchBar(
-                    progs=[('  ', 'networkmanager_dmenu', 'menu')],
+                    progs=[
+                        ('  ', 'networkmanager_dmenu', 'menu'),
+                        ('', 'polychromatic-controller', 'razer config')],
                     default_icon=None,
                     padding=0,
+                    background="005500",
                     ),
-                widget.Sep(),
-                widget.Systray(icon_size=28),
             ],
-            40, background="111111",
+            36, background="000000",
         ),
     ),
 ]
