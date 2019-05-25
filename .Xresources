@@ -1,2 +1,12 @@
-#Make your own
+! Rofi
+rofi.font: Source Sans Pro 14
+rofi.padding: 20
+rofi.line-padding: 2
+rofi.color-enabled: true
+rofi.hide-scrollbar: true
+rofi.separator-style: solid
+rofi.color-window: #000000, #00cc00, #000000
+rofi.color-normal: #000000, #FFFFFF, #111111, #FFFFFF, #000000
+
+
 Xft.dpi: 150
