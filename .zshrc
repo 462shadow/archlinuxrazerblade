@@ -1,28 +1,29 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH="${HOME}/.bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:"
-export PATH="${PATH}/usr/local/sbin:/opt/bin:/usr/bin/core_perl:/usr/games/bin:$(ruby -e 'puts Gem.user_dir')/bin:"
+export PATH="${PATH}/usr/local/sbin:/opt/bin:/usr/bin/core_perl:/usr/games/bin:$(ruby -e 'puts Gem.user_dir')/bin"
 export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 export XDG_CONFIG_HOME="$HOME/.config"
-export SUDO_USER="root"
 export XDG_CACHE_HOME="$HOME/.cache"
-
+export LANGUAGE="en_US.UTF-8"
+export EDITOR="nano"
 
 # Path to your oh-my-zsh installation.
 ZSH="$HOME/.oh-my-zsh"
 
 
 
-source /usr/share/powerline/bindings/zsh/powerline.zsh
+#source /usr/share/powerline/bindings/zsh/powerline.zsh
 
 
+POWERLEVEL9K_MODE='nerdfont-complete'
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-#ZSH_THEME="robbyrussell"
+ZSH_THEME="powerlevel9k/powerlevel9k"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -72,7 +73,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 # or set a custom format using the strftime function format specifications,
 # see 'man strftime' for details.
-HIST_STAMPS="yyyy-mm-dd"
+HIST_STAMPS="dd-mm-yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
@@ -89,7 +90,7 @@ plugins=(
 
 # User configuration
 
-# export MANPATH="/usr/local/man:$MANPATH"
+export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -102,7 +103,7 @@ plugins=(
 # fi
 
 # Compilation flags
-# export ARCHFLAGS="-arch x86_64"
+export ARCHFLAGS="-arch x86_64"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -123,3 +124,30 @@ source $ZSH/oh-my-zsh.sh
 
 source ~/.aliases
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(custom_icon user dir vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status)
+
+POWERLEVEL9K_CUSTOM_ICON="echo "
+POWERLEVEL9K_CUSTOM_ICON_FOREGROUND="255"
+POWERLEVEL9K_CUSTOM_ICON_BACKGROUND="235"
+POWERLEVEL9K_USER_DEFAULT_BACKGROUND="046"
+POWERLEVEL9K_USER_DEFAULT_FOREGROUND="000"
+POWERLEVEL9K_USER_SUDO_BACKGROUND="196"
+POWERLEVEL9K_USER_SUDO_FOREGROUND="231"
+POWERLEVEL9K_DIR_HOME_FOREGROUND="000"
+POWERLEVEL9K_DIR_HOME_BACKGROUND="040"
+POWERLEVEL9K_DIR_DEFAULT_FOREGROUND="008"
+POWERLEVEL9K_DIR_DEFAULT_BACKGROUND="118"
+POWERLEVEL9K_DIR_ETC_FOREGROUND="000"
+POWERLEVEL9K_DIR_ETC_BACKGROUND="121"
+POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND="008"
+POWERLEVEL9K_DIR_HOME_SUBFOLDER_BACKGROUND="118"
+POWERLEVEL9K_VCS_CLEAN_FOREGROUND="118"
+POWERLEVEL9K_VCS_CLEAN_BACKGROUND="008"
+POWERLEVEL9K_VCS_FOREGROUND="118"
+POWERLEVEL9K_VCS_BACKGROUND="008"
+POWERLEVEL9K_STATUS_ERROR_FOREGROUND="255"
+POWERLEVEL9K_STATUS_ERROR_BACKGROUND="088"
+POWERLEVEL9K_STATUS_OK_FOREGROUND="255"
+POWERLEVEL9K_STATUS_OK_BACKGROUND="237"
