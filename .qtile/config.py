@@ -144,9 +144,6 @@ arrow_text = {
     "padding":-1,
 }
 
-def bandwidth():
-    return subprocess.check_output('/home/g3k/.config/qtile/signal.sh').decode('utf-8').strip()
-
 screens = [
     Screen(
         top=bar.Bar(
