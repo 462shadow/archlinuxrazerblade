@@ -3,12 +3,6 @@
 ![Screenshot](geekbench-1.png)
 
 
-Matrix Green Theme Qtile widgets
-
-Buttons for networkmanager-dmenu, polychromatic-controller, pavucontrol
-
-![Screenshot](qtile-widgets.png)
-
 GRUB_CMDLINE_LINUX_DEFAULT="quiet nvme_core.default_ps_max_latency_us=5500 button.lid_init_state=open"
 
 razer:

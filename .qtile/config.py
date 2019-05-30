@@ -29,6 +29,9 @@ import subprocess
 from libqtile.config import Key, Screen, Group, Drag, Click
 from libqtile.command import lazy
 from libqtile import layout, bar, widget, hook
+from libqtile.bar import Bar
+from libqtile.widget import Spacer
+from powerline.bindings.qtile.widget import PowerlineTextBox
 
 try:
     from typing import List  # noqa: F401
@@ -64,7 +67,7 @@ keys = [
     # Unsplit = 1 window displayed, like Max layout, but still with
     # multiple stack panes
     Key([mod, "shift"], "Return", lazy.layout.toggle_split()),
-    Key([mod], "Return", lazy.spawn("alacritty")),
+    Key([mod], "Return", lazy.spawn("xfce4-terminal")),
     Key([mod], "w", lazy.spawn("vivaldi-stable")),
     Key([], "Print", lazy.spawn("xfce4-screenshooter")),
 
@@ -129,6 +132,8 @@ widget_defaults = dict(
     font='Source Sans Pro',
     fontsize=20,
     padding=10,
+    foreground="55ff55",
+    markup=True,
 )
 extension_defaults = widget_defaults.copy()
 
@@ -139,87 +144,65 @@ arrow_text = {
     "padding":-1,
 }
 
+def bandwidth():
+    return subprocess.check_output('/home/g3k/.config/qtile/signal.sh').decode('utf-8').strip()
 
 screens = [
     Screen(
         top=bar.Bar(
             [
-                widget.GroupBox(padding=3),
-                widget.Sep(),
+                widget.GroupBox(
+                    padding=3,
+                    spacing=3,
+                    font="Razer Blackwidow",
+                    fontsize=22,
+                    active="e1e1e1",
+                    highlight_method="text",
+                    this_current_screen_border="55ff55",
+                    center_aligned=True,
+                    ),
+                widget.Sep(foreground="005500"),
                 widget.CurrentLayout(),
-                widget.Sep(),
+                widget.Sep(foreground="005500"),
                 widget.Prompt(),
                 widget.Notify(default_timeout=5, font="Hack", fontsize=16),
                 widget.Spacer(),
-                widget.TextBox(
-                    foreground="00cc00",
-                    **arrow_text,
-                    ),
-                widget.Net(
-                    background="00cc00",
-                    foreground="000000",
-                    ),
-                widget.TextBox(
-                    background="00cc00",
-                    foreground="55ff55",
-                    **arrow_text,
-                    ),
+                widget.Net(),
                 widget.Wlan(
-                    format="--==[ {essid} ]==--",
-                    background="55ff55",
-                    foreground="000000",
+                    format="--==[ {essid} ]==--"
                     ),
-                widget.TextBox(
-                    foreground="005500",
-                    background="55ff55",
-                    **arrow_text,
+                widget.Sep(foreground="005500"),
+                widget.Memory(
+                    fmt="{MemUsed}/{MemTotal}M",
+                    update_interval=10,
                     ),
+                widget.Sep(foreground="005500"),
                 widget.LaunchBar(
-                    progs=[(" ", "pavucontrol", "volume")],
+                    progs=[("", "pavucontrol", "volume")],
                     padding=0,
                     default_icon=None,
-                    background="005500",
                     ),
-                widget.Volume(
-                    background="005500",
-                    ),
-                widget.TextBox(
-                    foreground="00cc00",
-                    background="005500",
-                    **arrow_text,
-                    ),
+                widget.Volume(),
+                widget.Sep(foreground="005500"),
                 widget.Battery(
-                    discharge_char=" ",
-                    charge_char=" ",
+                    discharge_char="  ",
+                    charge_char="  ",
                     format="{char}{percent:2.0%}",
-                    background="00cc00",
-                    foreground="000000",
                     ),
-                widget.TextBox(
-                    foreground="55ff55",
-                    background="00cc00",
-                    **arrow_text,
-                    ),
+                widget.Sep(foreground="005500"),
                 widget.Clock(
-                    format='%a %b %d, %I:%M %p',
-                    background="55ff55",
-                    foreground="000000",
+                    format=' %a %b %d, %I:%M %p',
                     ),
-                widget.TextBox(
-                    foreground="005500",
-                    background="55ff55",
-                    **arrow_text,
-                    ),
+                widget.Sep(foreground="005500"),
                 widget.LaunchBar(
                     progs=[
                         ('  ', 'networkmanager_dmenu', 'menu'),
                         ('', 'polychromatic-controller', 'razer config')],
                     default_icon=None,
                     padding=0,
-                    background="005500",
                     ),
             ],
-            36, background="000000",
+            40, background="000000",
         ),
     ),
 ]
@@ -255,6 +238,13 @@ floating_layout = layout.Floating(float_rules=[
     {'wname': 'pinentry'},  # GPG key password entry
     {'wmclass': 'ssh-askpass'},  # ssh-askpass
     {'wmclass': 'smb4k'},
+    {'wmclass': 'leafpad'},
+    {'wmclass': 'spotify'},
+    {'wmclass': 'Spotify'},
+    {'wmclass': 'polychromatic-controller'},
+    {'wmclass': 'pavucontrol'},
+    {'wmclass': 'nemo'},
+    {'wmclass': 'Nemo'},
 ])
 auto_fullscreen = True
 focus_on_window_activation = "smart"
