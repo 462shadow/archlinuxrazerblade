@@ -8,6 +8,7 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"
 export LANGUAGE="en_US.UTF-8"
 export EDITOR="nano"
+export TERM="xterm-256color"
 
 # Path to your oh-my-zsh installation.
 ZSH="$HOME/.oh-my-zsh"
@@ -73,7 +74,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 # or set a custom format using the strftime function format specifications,
 # see 'man strftime' for details.
-HIST_STAMPS="dd-mm-yyyy"
+HIST_STAMPS="mm-dd-yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
@@ -128,11 +129,12 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(custom_icon user dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status)
 
+POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
 POWERLEVEL9K_CUSTOM_ICON="echo "
-POWERLEVEL9K_CUSTOM_ICON_FOREGROUND="255"
+POWERLEVEL9K_CUSTOM_ICON_FOREGROUND="118"
 POWERLEVEL9K_CUSTOM_ICON_BACKGROUND="235"
-POWERLEVEL9K_USER_DEFAULT_BACKGROUND="046"
-POWERLEVEL9K_USER_DEFAULT_FOREGROUND="000"
+POWERLEVEL9K_USER_DEFAULT_BACKGROUND="118"
+POWERLEVEL9K_USER_DEFAULT_FOREGROUND="235"
 POWERLEVEL9K_USER_SUDO_BACKGROUND="196"
 POWERLEVEL9K_USER_SUDO_FOREGROUND="231"
 POWERLEVEL9K_DIR_HOME_FOREGROUND="000"
