@@ -1,0 +1,2 @@
+alias pacman="sudo pacman"
+alias mirrors="sudo reflector -l 200 -a 24 -c US --proto http --proto https --sort delay --save /etc/pacman.d/mirrorlist"
