@@ -4,6 +4,7 @@
 
 
 razer:
+
   	$ yay -S python-notify2
 	$ yay -S openrazer-meta polychromatic
 	$ sudo gpasswd -a $USER plugdev
