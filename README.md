@@ -1,29 +1,44 @@
 # archlinuxrazerblade
-![Screenshot](screen.png)
+![Screenshot](screen2.png)
 ![Screenshot](geekbench-1.png)
 
 
-GRUB_CMDLINE_LINUX_DEFAULT="quiet nvme_core.default_ps_max_latency_us=5500 button.lid_init_state=open"
-
 razer:
   
---  first install python-notify2 via AUR
+--  install python-notify2 via AUR
   
---  then install open-razer-meta and polychromatic
+--  install open-razer-meta and polychromatic via AUR
   
---  must have linux headers installed and add user to plugdev group  
+--  must have linux headers installed and add user to plugdev group, then
 
-net-tuning.conf from blackarch
+-- $ systemctl --user enable --now openrazer-daemon.service  
+
+net-tuning.conf from other blackarch install
 
 change /etc/issue from archlinux to BlackArch
 
-Plasma theme uses breeze-blurred-git window decorations, numix-circle icons, breeze-darker-transparent plasma theme.  Change Font dpi to 150 for Razer Blade Stealth.  Scaling creates issues with Konsole.
+Set Plasma display scale x 2.  Other QT Scaling in .xprofile.
 
-updated tlp and i915 config.  Benchmark link https://browser.geekbench.com/v4/cpu/13253832
+PACMAN - tlp zsh latte-dock zsh-theme-powerlevel9k zsh-autosuggestions x86-input-libinput x86-input-evdev x86-video-intel intel-compute-runtime vulkan-intel plasma plasma-meta
 
-running drm-intel-next-git from AUR.
+AUR - slimbookbattery breeze-blurred-git newaita-icons-git python-powerline-git oh-my-zsh-git
 
-All credit goes to:
+KDE - deepin dark 2 theme
+
+zsh setup:
+
+	$ cp -ar /usr/share/oh-my-zsh ~/.oh-my-zsh
+
+	$ cp -ar /usr/share/zsh-theme-powerlevel9k ~/.oh-my-zsh/themes/powerlevel9k 
+
+	https://github.com/powerline/fonts
+
+
+Benchmark link https://browser.geekbench.com/v4/cpu/13253832
+
+Links:
+
+https://github.com/bhilburn/powerlevel9k
 
 https://arcolinux.info
 
@@ -31,4 +46,8 @@ https://archlabslinux.com
 
 https://www.google.com
 
+http://terminal.sexy
 
+https://www.razer.com/downloads
+
+https://wiki.archlinux.org/index.php/HiDPI
