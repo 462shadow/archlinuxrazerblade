@@ -30,15 +30,15 @@ rofi.color-normal: #000000, #FFFFFF, #111111, #FFFFFF, #000000
 
 
 xterm*font: 7x13
-xterm*faceName: xos4 Terminess Powerline:size=12:antialias=false
+xterm*faceName: xos4 Terminess Powerline:size=10:antialias=false
 
 
 URxvt*letterSpace:              -2
-URxvt*font:                     xft:xos4 Terminess Powerline:regular:size=12
-URxvt*imFont:                   xft:xos4 Terminess Powerline:regular:size=12
-URxvt*boldFont:                 xft:xos4 Terminess Powerline:bold:size=12
-URxvt*italicFont:               xft:xos4 Terminess Powerline:italic:size=12
-URxvt*boldItalicFont:           xft:xos4 Terminess Powerline:regular:size=12
+URxvt*font:                     xft:xos4 Terminess Powerline:regular:size=10
+URxvt*imFont:                   xft:xos4 Terminess Powerline:regular:size=10
+URxvt*boldFont:                 xft:xos4 Terminess Powerline:bold:size=10
+URxvt*italicFont:               xft:xos4 Terminess Powerline:italic:size=10
+URxvt*boldItalicFont:           xft:xos4 Terminess Powerline:regular:size=10
 
 URxvt*perl-ext-common:      default,clipboard,url-select,keyboard-select
 URxvt*url-select.launcher:  chromium
@@ -48,7 +48,7 @@ URxvt*keysym.M-Escape:      perl:keyboard-select:activate
 URxvt*keysym.M-s:           perl:keyboard-select:search
 
 
-Xft.dpi: 150
+Xft.dpi: 192
 Xft.autohint: 0
 Xft.lcdfilter:  lcddefault
 Xft.hintstyle:  hintfull

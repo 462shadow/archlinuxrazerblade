@@ -23,7 +23,7 @@ export GDK_DPI_SCALE=1
 # Alaciritty Scaling
 #export WINIT_HIDPI_FACTOR: 1.5
 
-#xrandr --output eDP1 --primary --mode 3200x1800 --dpi 276 &
+xrandr --output eDP1 --mode 3200x1800 --dpi 276 &
 
 #thanks to archlabs
 xset r rate 300 60

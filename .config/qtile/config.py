@@ -239,6 +239,7 @@ floating_layout = layout.Floating(float_rules=[
     {'wmclass': 'pavucontrol'},
     {'wmclass': 'dolphin'},
     {'wmclass': 'Dolphin'},
+    {'wmclass': 'lxappearance'},
 ])
 auto_fullscreen = True
 focus_on_window_activation = "smart"
