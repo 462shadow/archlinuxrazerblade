@@ -1,0 +1,9 @@
+#!/bin/bash
+
+ifconfig br0 down
+brctl delbr br0
+echo "0" > /proc/sys/net/ipv4/ip_forward
+iptables --flush
+iptables-restore < /usr/share/iptables/simple.rules
+
+
