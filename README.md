@@ -24,11 +24,11 @@ sddm:
 	--==[ BlackArch ]==-- \r (\l)
 
 
-Set Plasma display scale x 2.  Other QT Scaling in .xprofile.
+Set Plasma display scale x 2.  Other QT Scaling in .xprofile
 
 PACMAN - tlp zsh latte-dock zsh-theme-powerlevel9k zsh-autosuggestions x86-input-evdev x86-video-intel intel-compute-runtime vulkan-intel plasma plasma-meta pigz smb4k
 
-AUR - slimbookbattery breeze-blurred-git newaita-icons-git python-powerline-git oh-my-zsh-git arch-animated-startscreen
+AUR - slimbookbattery networkmanager-dmenu-git breeze-blurred-git newaita-icons-git python-powerline-git oh-my-zsh-git arch-animated-startscreen
 
 KDE - deepin dark 2 theme
 
@@ -41,12 +41,12 @@ zsh setup:
 	$ git clone https://github.com/powerline/fonts.git --depth=1
 	$ cd fonts
 	$ ./install.sh
+	$ fc-cahce -fv ~/.local/share/fonts
 
-/etc/makepkg.conf
+RazerFont:
 
-	MAKEFLAGS="-j9"
-	COMPRESSGZ=(pigz -c -f -n)
-	COMPRESSXZ=(xz -c -T 8 -z -)
+	$ cp RazerBlackwidow-Regular.ttf ~/.local/share/fonts/
+	$ fc-cache -fv ~/.local/share/fonts
 
 
 Benchmark link https://browser.geekbench.com/v4/cpu/13253832
