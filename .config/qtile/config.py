@@ -31,7 +31,6 @@ from libqtile.command import lazy
 from libqtile import layout, bar, widget, hook
 from libqtile.bar import Bar
 from libqtile.widget import Spacer
-from powerline.bindings.qtile.widget import PowerlineTextBox
 
 try:
     from typing import List  # noqa: F401
@@ -164,22 +163,10 @@ screens = [
                 widget.Prompt(),
                 widget.Notify(default_timeout=5, font="Hack", fontsize=16),
                 widget.Spacer(),
-                widget.Net(),
-                widget.Wlan(
-                    format="--==[ {essid} ]==--"
-                    ),
-                widget.Sep(foreground="005500"),
                 widget.Memory(
                     fmt="{MemUsed}/{MemTotal}M",
                     update_interval=10,
                     ),
-                widget.Sep(foreground="005500"),
-                widget.LaunchBar(
-                    progs=[("", "pavucontrol", "volume")],
-                    padding=0,
-                    default_icon=None,
-                    ),
-                widget.Volume(),
                 widget.Sep(foreground="005500"),
                 widget.Battery(
                     discharge_char="  ",
@@ -188,16 +175,26 @@ screens = [
                     ),
                 widget.Sep(foreground="005500"),
                 widget.Clock(
-                    format=' %a %b %d, %I:%M %p',
+                    format='%a %b %d',
+                    ),
+                widget.Clock(
+                    format="%I:%M %p",
+                    fontsize=30,
                     ),
                 widget.Sep(foreground="005500"),
+                widget.Wlan(
+                    format="",
+                    ),
                 widget.LaunchBar(
                     progs=[
                         ('  ', 'networkmanager_dmenu', 'menu'),
-                        ('', 'polychromatic-controller', 'razer config')],
+                        ('', 'polychromatic-controller', 'razer config'),
+                        ('', 'pavucontrol', 'sound menu'),
+                        ('', 'python3 /usr/share/slimbookbattery/preferences.pyc', 'slimbook preferences')],
                     default_icon=None,
                     padding=0,
                     ),
+                
             ],
             40, background="000000",
         ),
@@ -240,8 +237,8 @@ floating_layout = layout.Floating(float_rules=[
     {'wmclass': 'Spotify'},
     {'wmclass': 'polychromatic-controller'},
     {'wmclass': 'pavucontrol'},
-    {'wmclass': 'nemo'},
-    {'wmclass': 'Nemo'},
+    {'wmclass': 'dolphin'},
+    {'wmclass': 'Dolphin'},
 ])
 auto_fullscreen = True
 focus_on_window_activation = "smart"
