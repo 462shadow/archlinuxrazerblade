@@ -53,6 +53,8 @@ Benchmark link https://browser.geekbench.com/v4/cpu/13253832
 
 Links:
 
+https://github.com/arwkin/edpanel-grub2-theme
+
 https://www.dennogumi.org/2014/04/unlocking-kwallet-with-pam/
 
 https://github.com/bhilburn/powerlevel9k
