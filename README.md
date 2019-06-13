@@ -38,7 +38,9 @@ zsh setup:
 
 	$ cp -ar /usr/share/oh-my-zsh ~/.oh-my-zsh
 	$ cp -ar /usr/share/zsh-theme-powerlevel9k ~/.oh-my-zsh/themes/powerlevel9k 
-	https://github.com/powerline/fonts
+	$ git clone https://github.com/powerline/fonts.git --depth=1
+	$ cd fonts
+	$ ./install.sh
 
 /etc/makepkg.conf
 
