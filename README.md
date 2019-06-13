@@ -29,6 +29,8 @@ AUR - slimbookbattery breeze-blurred-git newaita-icons-git python-powerline-git 
 
 KDE - deepin dark 2 theme
 
+Firejail setup: https://blog.layer5services.com
+
 zsh setup:
 
 	$ cp -ar /usr/share/oh-my-zsh ~/.oh-my-zsh
