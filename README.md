@@ -19,11 +19,14 @@ sddm:
 
 /etc/sysctl.d/net-tuning.conf from BlackArch
 
-change /etc/issue from ArchLinux to BlackArch
+/etc/issue:
+
+	--==[ BlackArch ]==-- \r (\l)
+
 
 Set Plasma display scale x 2.  Other QT Scaling in .xprofile.
 
-PACMAN - base base-devel xorg xorg-server linux-headers qt5 tlp zsh latte-dock zsh-theme-powerlevel9k zsh-autosuggestions x86-input-evdev x86-video-intel intel-compute-runtime vulkan-intel plasma plasma-meta pigz smb4k
+PACMAN - tlp zsh latte-dock zsh-theme-powerlevel9k zsh-autosuggestions x86-input-evdev x86-video-intel intel-compute-runtime vulkan-intel plasma plasma-meta pigz smb4k
 
 AUR - slimbookbattery breeze-blurred-git newaita-icons-git python-powerline-git oh-my-zsh-git arch-animated-startscreen
 
@@ -44,10 +47,11 @@ zsh setup:
 	COMPRESSXZ=(xz -c -T 8 -z -)
 
 
-
 Benchmark link https://browser.geekbench.com/v4/cpu/13253832
 
 Links:
+
+https://www.dennogumi.org/2014/04/unlocking-kwallet-with-pam/
 
 https://github.com/bhilburn/powerlevel9k
 
