@@ -1,0 +1,8 @@
+[Desktop Entry]
+Exec=/usr/lib/polkit-kde-authentication-agent-1
+Hidden=true
+Icon=system-run
+Path=
+Terminal=false
+Type=Application
+X-XFCE-Autostart-Override=true

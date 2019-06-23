@@ -1,22 +1,39 @@
-*background:  #000000
-*foreground:  #8fffda
-*color0:  #000000
-*color1:  #ce5200
-*color2:  #24ff01
-*color3:  #bebe00
-*color4:  #1100c3
-*color5:  #dc00df
-*color6:  #00bcc7
-*color7:  #8fffda
-*color8:  #9c288c
-*color9:  #f93200
-*color10:  #24ff01
-*color11:  #bebe00
-*color12:  #283efc
-*color13:  #c500fe
-*color14:  #00a6ee
-*color15:  #8fffda
+! special
+*.foreground:   #a2a2a2
+*.background:   #282828
+*.cursorColor:  #a2a2a2
 
+! black
+*.color0:       #555555
+*.color8:       #888888
+
+! red
+*.color1:       #9c3528
+*.color9:       #d64937
+
+! green
+*.color2:       #61bc3b
+*.color10:      #86df5d
+
+! yellow
+*.color3:       #f3b43a
+*.color11:      #fdd75a
+
+! blue
+*.color4:       #0d68a8
+*.color12:      #0f75bd
+
+! magenta
+*.color5:       #744560
+*.color13:      #9e5e83
+
+! cyan
+*.color6:       #288e9c
+*.color14:      #37c3d6
+
+! white
+*.color7:       #a2a2a2
+*.color15:      #f9f9f9
 
 ! Rofi
 rofi.font: Source Sans Pro 14
@@ -48,7 +65,7 @@ URxvt*keysym.M-Escape:      perl:keyboard-select:activate
 URxvt*keysym.M-s:           perl:keyboard-select:search
 
 
-Xft.dpi: 192
+! Xft.dpi: 150
 Xft.autohint: 0
 Xft.lcdfilter:  lcddefault
 Xft.hintstyle:  hintfull
