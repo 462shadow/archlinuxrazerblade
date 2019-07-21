@@ -10,6 +10,10 @@ export LANGUAGE="en_US.UTF-8"
 export EDITOR="nano"
 export TERM="xterm-256color"
 
+if which ruby >/dev/null && which gem >/dev/null; then
+    PATH="$(ruby -r rubygems -e 'puts Gem.user_dir')/bin:$PATH"
+fi
+
 # Path to your oh-my-zsh installation.
 ZSH="$HOME/.oh-my-zsh"
 
@@ -18,7 +22,7 @@ ZSH="$HOME/.oh-my-zsh"
 #source /usr/share/powerline/bindings/zsh/powerline.zsh
 
 
-POWERLEVEL9K_MODE='nerdfont-complete'
+#POWERLEVEL9K_MODE='nerdfont-complete'
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -130,7 +134,7 @@ fi
 source $ZSH/oh-my-zsh.sh
 
 source ~/.aliases
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+#source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status)
