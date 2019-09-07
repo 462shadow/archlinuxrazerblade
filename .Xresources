@@ -1,39 +1,6 @@
-! special
-*.foreground:   #a2a2a2
-*.background:   #282828
-*.cursorColor:  #a2a2a2
-
-! black
-*.color0:       #555555
-*.color8:       #888888
-
-! red
-*.color1:       #9c3528
-*.color9:       #d64937
-
-! green
-*.color2:       #61bc3b
-*.color10:      #86df5d
-
-! yellow
-*.color3:       #f3b43a
-*.color11:      #fdd75a
-
-! blue
-*.color4:       #0d68a8
-*.color12:      #0f75bd
-
-! magenta
-*.color5:       #744560
-*.color13:      #9e5e83
-
-! cyan
-*.color6:       #288e9c
-*.color14:      #37c3d6
-
-! white
-*.color7:       #a2a2a2
-*.color15:      #f9f9f9
+! generic
+*foreground:                  #cccccc
+*background:	#1a1e24
 
 ! Rofi
 rofi.font: Source Sans Pro 14
@@ -46,29 +13,59 @@ rofi.color-window: #000000, #00cc00, #000000
 rofi.color-normal: #000000, #FFFFFF, #111111, #FFFFFF, #000000
 
 
-xterm*font: 7x13
-xterm*faceName: xos4 Terminess Powerline:size=10:antialias=false
+! urxvt
+URxvt.font:                   xft:xos4 Terminus:size=11:antialias=true:hinting=true
+URxvt.url-launcher:           /usr/bin/xdg-open
+URxvt.matcher.button:         1
+URxvt.scrollBar:              false
+URxvt.termName:               xterm-256color
+URxvt.saveLines:              10000
+URxvt*inheritPixmap:          true
+URxvt*shading:                10
+URxvt.clipboard.autocopy:     true
+URxvt.keysym.M-Escape:        perl:keyboard-select:activate
+URxvt.keysym.Control-Shift-V: perl:pasta:paste
+URxvt.perl-ext-common:        default,selection-to-clipboard,pasta,matcher,keyboard-select
+URxvt.keysym.M-u:             perl:url-select:select_next
+urxvt.transparent:            true
+urxvt.buffered:               true
+urxvt.jumpScroll:             false
+urxvt.scrollTtyKeypress:      true
+urxvt.scrollTtyOutput:        false
+urxvt.scrollWithBuffer:       false
+urxvt.scrollstyle:            plain
+urxvt.secondaryScroll:        false
+urxvt.xftAntialias:           true
+urxvt.color12:                RoyalBlue
+urxvt.matcher.rend.0:         Bold fg6
+urxvt.cursorBlink:            false
+urxvt.cursorColor:            #6298e0
+urxvt.mapAlert:               true
+urxvt.pointerBlank:           true
+urxvt.resource:               value
 
 
-URxvt*letterSpace:              -2
-URxvt*font:                     xft:xos4 Terminess Powerline:regular:size=10
-URxvt*imFont:                   xft:xos4 Terminess Powerline:regular:size=10
-URxvt*boldFont:                 xft:xos4 Terminess Powerline:bold:size=10
-URxvt*italicFont:               xft:xos4 Terminess Powerline:italic:size=10
-URxvt*boldItalicFont:           xft:xos4 Terminess Powerline:regular:size=10
+! xterm
+xterm*VT100*geometry:         80x24
+xterm*faceName:               xft:xos4 Terminus:size=11:antialias=true
+xterm*faceSize:               12
+xterm*renderFont:             true
+xterm*utf8:                   always
+xterm*utf8Title:              true
+xterm*locale:                 true
+xterm*cursorColor:            #6298e0
+xterm*cursorBlink:            false
+xterm*selectToClipboard:      true
+xterm*SaveLines:              10000
+xterm*transparent:            true
 
-URxvt*perl-ext-common:      default,clipboard,url-select,keyboard-select
-URxvt*url-select.launcher:  chromium
-URxvt*url-select.underline: true
-URxvt*keysym.M-u:           perl:url-select:select_next
-URxvt*keysym.M-Escape:      perl:keyboard-select:activate
-URxvt*keysym.M-s:           perl:keyboard-select:search
-
-
-! Xft.dpi: 150
-Xft.autohint: 0
-Xft.lcdfilter:  lcddefault
+! cursor
+Xcursor.theme:                Breeze
+Xcursor.size:                 36
+Xft.dpi:		192
+Xft.autohint:	1
+Xft.lcdfilter:	lcddefault
 Xft.hintstyle:  hintfull
-Xft.hinting: 1
-Xft.antialias: 1
-Xft.rgba: rgb
+Xft.hinting:	1
+Xft.antialias:	1
+Xft.rgba:		rgb

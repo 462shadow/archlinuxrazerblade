@@ -1,7 +1,7 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH="${HOME}/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:"
-export PATH="${PATH}/usr/local/sbin:/opt/bin:/usr/bin/core_perl:/usr/games/bin:$(ruby -e 'puts Gem.user_dir')/bin"
+export PATH="${PATH}/usr/local/sbin:/opt/bin:/usr/bin/core_perl:/usr/games/bin:"
 export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 export XDG_CONFIG_HOME="$HOME/.config"
@@ -22,7 +22,7 @@ ZSH="$HOME/.oh-my-zsh"
 #source /usr/share/powerline/bindings/zsh/powerline.zsh
 
 
-#POWERLEVEL9K_MODE='nerdfont-complete'
+POWERLEVEL9K_MODE='nerdfont-complete'
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -99,12 +99,12 @@ export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
-if ! pgrep -u "$USER" ssh-agent > /dev/null; then
-    ssh-agent > ~/.ssh-agent-thing
-fi
-if [[ ! "$SSH_AUTH_SOCK" ]]; then
-    eval "$(<~/.ssh-agent-thing)"
-fi
+#if ! pgrep -u "$USER" ssh-agent > /dev/null; then
+#    ssh-agent > ~/.ssh-agent-thing
+#fi
+#if [[ ! "$SSH_AUTH_SOCK" ]]; then
+#    eval "$(<~/.ssh-agent-thing)"
+#fi
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -136,8 +136,10 @@ source $ZSH/oh-my-zsh.sh
 source ~/.aliases
 #source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon host dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status)
+POWERLEVEL9K_HOST_LOCAL_FOREGROUND="235"
+POWERLEVEL9K_HOST_LOCAL_BACKGROUND="118"
 POWERLEVEL9K_CONTEXT_DEFAULT_FOREGROUND="235"
 POWERLEVEL9K_CONTEXT_DEFAULT_BACKGROUND="118"
 POWERLEVEL9K_CONTEXT_REMOTE_FOREGROUND="255"
@@ -147,8 +149,8 @@ POWERLEVEL9K_CONTEXT_REMOTE_SUDO_BACKGROUND="255"
 
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
 #POWERLEVEL9K_CUSTOM_ICON="echo "
-#POWERLEVEL9K_CUSTOM_ICON_FOREGROUND="040"
-#POWERLEVEL9K_CUSTOM_ICON_BACKGROUND="235"
+POWERLEVEL9K_OS_ICON_FOREGROUND="040"
+POWERLEVEL9K_OS_ICON_BACKGROUND="235"
 POWERLEVEL9K_USER_DEFAULT_BACKGROUND="118"
 POWERLEVEL9K_USER_DEFAULT_FOREGROUND="235"
 POWERLEVEL9K_USER_SUDO_BACKGROUND="196"
