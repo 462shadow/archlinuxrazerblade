@@ -81,9 +81,9 @@ sudo chsh -s /bin/zsh $USER
 
 sleep 1
 
-echo "##########################################"
+echo ""
 echo "configuring root bash"
-echo "##########################################"
+echo ""
 sudo cp -vf /usr/share/blackarch/config/bash/bashrc /root/.bashrc
 sudo cp -vf /usr/share/blackarch/config/bash/bash_profile /root/.bash_profile
 
@@ -95,6 +95,16 @@ sudo cp -v .etc/sysctl.d/net-tuning.conf /etc/sysctl.d/
 sudo sysctl -f /etc/sysctl.d/net-tuning.conf -q
 
 sleep 1
+
+echo ""
+echo "Setting up local folders for plasma.."
+echo ""
+mkdir -pv ~/.local/share/plasma/look-and-feel
+mkdir -pv ~/.themes
+mkdir -pv ~/.local/share/plasma/desktoptheme
+mkdir -pv ~/.local/share/aurorae/themes/
+
+
 
 echo "##################################"
 echo "Finishing Up"
