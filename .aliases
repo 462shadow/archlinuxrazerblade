@@ -1,2 +1,11 @@
-alias pacman="sudo pacman"
-alias mirrors="sudo reflector -l 200 -a 24 -c US --proto http --proto https --sort delay --save /etc/pacman.d/mirrorlist"
+#install reflector
+#update mirrors
+alias mirrors="sudo reflector -l 100 -a 12 -c US --sort delay --proto http --proto https --save /etc/pacman.d/mirrorlist"
+#update grub
+alias gu="sudo grub-mkconfig -o /boot/grub/grub.cfg"
+#remove orphans
+alias rmorphans="sudo pacman -Rns $(pacman -Qtdq)"
+#install localepurge from AUR
+#edit /etc/locale.purge
+#remove man pages
+alias rmman="sudo localepurge-config && sudo localepurge"
