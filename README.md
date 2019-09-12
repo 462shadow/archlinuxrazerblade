@@ -68,6 +68,8 @@ Benchmark link https://browser.geekbench.com/v4/cpu/13253832
 
 Links:
 
+https://mikepalmer.net/razer-blade-stealth-libinput-touchpad-issues/
+
 https://github.com/arwkin/edpanel-grub2-theme
 
 https://github.com/bhilburn/powerlevel9k

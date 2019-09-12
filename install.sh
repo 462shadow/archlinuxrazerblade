@@ -20,10 +20,10 @@ sleep 1
 echo ""
 echo "Installing Blackarch....."
 echo ""
-curl -O https://blackarch.org/strap.sh > $HOME/Downloads/strap.sh
-chmod +x $HOME/Downloads/strap.sh
+curl -O https://blackarch.org/strap.sh > /$HOME/Downloads/strap.sh
+chmod +x /$HOME/Downloads/strap.sh
 sudo ./$HOME/Downloads/strap.sh
-rm $HOME/Downloads/strap.sh
+rm /$HOME/Downloads/strap.sh
 sudo sed -i 's/Arch Linux/--==[ BlackArch ]==--/g' /etc/issue
 sudo pacman -S blackarch-mirrorlist blackarch-keyring --noconfirm --overwrite "*"
 echo "edit /etc/pacman.d/blackarch-mirrorlist for servers"
@@ -72,11 +72,11 @@ systemctl --user enable --now openrazer-daemon.service
 echo ""
 echo "configuring zsh"
 echo ""
-cp -arv /usr/share/oh-my-zsh $HOME/.oh-my-zsh
-cp -arv /usr/share/zsh-theme-powerlevel9k $HOME/.oh-my-zsh/themes/powerlevel9k
-cp -v .zshrc $HOME/.zshrc
-cp -v .zshenv $HOME/.zshenv
-cp -v .aliases $HOME/.aliases
+cp -arv /usr/share/oh-my-zsh /$HOME/.oh-my-zsh
+cp -arv /usr/share/zsh-theme-powerlevel9k /$HOME/.oh-my-zsh/themes/powerlevel9k
+cp -v .zshrc /$HOME/.zshrc
+cp -v .zshenv /$HOME/.zshenv
+cp -v .aliases /$HOME/.aliases
 sudo chsh -s /bin/zsh $USER
 
 sleep 1
@@ -109,10 +109,10 @@ mkdir -pv ~/.local/share/aurorae/themes/
 echo "##################################"
 echo "Finishing Up"
 echo "##################################"
-cp -vf .Xresources $HOME/.Xresources
-cp -vf .Xmodmap $HOME/.Xmodmap
-cp -vf .xinitrc $HOME/.xinitrc
-xmodmap $HOME/.Xmodmap
+cp -vf .Xresources /$HOME/.Xresources
+cp -vf .Xmodmap /$HOME/.Xmodmap
+cp -vf .xinitrc /$HOME/.xinitrc
+xmodmap /$HOME/.Xmodmap
 sudo mkinitcpio -P
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 
