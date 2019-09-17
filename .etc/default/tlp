@@ -52,7 +52,7 @@ MAX_LOST_WORK_SECS_ON_BAT=60
 #   you should know what you're doing! You *must* disable your distribution's
 #   governor settings or conflicts will occur.
 # Default: <none>
-#CPU_SCALING_GOVERNOR_ON_AC=performance
+#CPU_SCALING_GOVERNOR_ON_AC=powersave
 #CPU_SCALING_GOVERNOR_ON_BAT=powersave
 
 # Set the min/max frequency available for the scaling governor.
@@ -69,8 +69,8 @@ MAX_LOST_WORK_SECS_ON_BAT=60
 # Values are given in order of increasing power saving.
 # Note: Intel Skylake or newer CPU and Kernel >= 4.10 required.
 # Default: <none>
-CPU_HWP_ON_AC=performance
-CPU_HWP_ON_BAT=default
+CPU_HWP_ON_AC=balance_performance
+CPU_HWP_ON_BAT=balance_power
 
 # Set Intel P-state performance: 0..100 (%).
 # Limit the max/min P-state to control the power dissipation of the CPU.
@@ -88,8 +88,8 @@ CPU_HWP_ON_BAT=default
 # - This may conflict with your distribution's governor settings
 # - A value of 1 does *not* activate boosting, it just allows it
 # Default: <none>
-CPU_BOOST_ON_AC=1
-CPU_BOOST_ON_BAT=1
+#CPU_BOOST_ON_AC=1
+#CPU_BOOST_ON_BAT=0
 
 # Minimize number of used CPU cores/hyper-threads under light load conditions:
 #   0=disable, 1=enable.
@@ -115,7 +115,7 @@ NMI_WATCHDOG=0
 # Requires kernel module msr and x86_energy_perf_policy from linux-tools.
 # Default: <none>
 ENERGY_PERF_POLICY_ON_AC=performance
-ENERGY_PERF_POLICY_ON_BAT=balance-power
+ENERGY_PERF_POLICY_ON_BAT=power
 
 # Disk devices; separate multiple devices with spaces.
 # Devices can be specified by disk ID also (lookup with: tlp diskid).
@@ -156,7 +156,7 @@ DISK_APM_LEVEL_ON_BAT="128 128"
 # - Single queue schedulers are legacy now and were removed together with
 #   the old block layer in kernel 5.0
 # Default: keep
-#DISK_IOSCHED="mq-deadline mq-deadline"
+DISK_IOSCHED="mq-deadline mq-deadline"
 
 # AHCI link power management (ALPM) for disk devices:
 #   min_power, med_power_with_dipm(*), medium_power, max_performance.
@@ -194,29 +194,29 @@ AHCI_RUNTIME_PM_TIMEOUT=15
 # Possible values depend on your hardware. For available frequencies see
 # the output of tlp-stat -g.
 # Default: <none>
-INTEL_GPU_MIN_FREQ_ON_AC=300
-INTEL_GPU_MIN_FREQ_ON_BAT=300
-INTEL_GPU_MAX_FREQ_ON_AC=1150
-INTEL_GPU_MAX_FREQ_ON_BAT=800
-INTEL_GPU_BOOST_FREQ_ON_AC=1150
-INTEL_GPU_BOOST_FREQ_ON_BAT=1000
+#INTEL_GPU_MIN_FREQ_ON_AC=0
+#INTEL_GPU_MIN_FREQ_ON_BAT=0
+#INTEL_GPU_MAX_FREQ_ON_AC=0
+#INTEL_GPU_MAX_FREQ_ON_BAT=0
+#INTEL_GPU_BOOST_FREQ_ON_AC=0
+#INTEL_GPU_BOOST_FREQ_ON_BAT=0
 
 # Radeon graphics clock speed (profile method): low, mid, high, auto, default;
 # auto = mid on BAT, high on AC.
 # Default: default
-#RADEON_POWER_PROFILE_ON_AC=default
-#RADEON_POWER_PROFILE_ON_BAT=default
+RADEON_POWER_PROFILE_ON_AC=default
+RADEON_POWER_PROFILE_ON_BAT=default
 
 # Radeon dynamic power management method (DPM): battery, performance.
 # Default: <none>
-#RADEON_DPM_STATE_ON_AC=performance
-#RADEON_DPM_STATE_ON_BAT=battery
+RADEON_DPM_STATE_ON_AC=performance
+RADEON_DPM_STATE_ON_BAT=battery
 
 # Radeon DPM performance level: auto, low, high; auto is recommended.
 # Note: effective only when RADEON_DPM_STATE_ON_AC/BAT is activated.
 # Default: auto
-#RADEON_DPM_PERF_LEVEL_ON_AC=auto
-#RADEON_DPM_PERF_LEVEL_ON_BAT=auto
+RADEON_DPM_PERF_LEVEL_ON_AC=auto
+RADEON_DPM_PERF_LEVEL_ON_BAT=auto
 
 # WiFi power saving mode: on=enable, off=disable; not supported by all adapters.
 # Default: <none>
