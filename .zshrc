@@ -22,7 +22,7 @@ ZSH="$HOME/.oh-my-zsh"
 #source /usr/share/powerline/bindings/zsh/powerline.zsh
 
 
-POWERLEVEL9K_MODE='nerdfont-complete'
+#POWERLEVEL9K_MODE='nerdfont-complete'
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
