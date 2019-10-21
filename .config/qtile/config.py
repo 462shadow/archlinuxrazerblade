@@ -45,15 +45,24 @@ def autostart():
 mod = "mod4"
 
 keys = [
-    # Switch between windows in current stack pane
-    Key([mod], "j", lazy.layout.down()),
-    Key([mod], "k", lazy.layout.up()),
-    Key([mod], "h", lazy.layout.left()),
-    Key([mod], "l", lazy.layout.right()),
 
-    # Move windows up or down in current stack
-    Key([mod, "control"], "k", lazy.layout.shuffle_down()),
-    Key([mod, "control"], "j", lazy.layout.shuffle_up()),
+	Key([mod], "m", lazy.layout.down()),
+	Key([mod], "k", lazy.layout.up()),
+	Key([mod], "j", lazy.layout.left()),
+	Key([mod], "l", lazy.layout.right()),
+	Key([mod, "shift"], "m", lazy.layout.shuffle_down()),
+	Key([mod, "shift"], "k", lazy.layout.shuffle_up()),
+	Key([mod, "shift"], "j", lazy.layout.shuffle_left()),
+	Key([mod, "shift"], "l", lazy.layout.shuffle_right()),
+	Key([mod, "mod1"], "m", lazy.layout.flip_down()),
+	Key([mod, "mod1"], "", lazy.layout.flip_up()),
+	Key([mod, "mod1"], "j", lazy.layout.flip_left()),
+	Key([mod, "mod1"], "l", lazy.layout.flip_right()),
+	Key([mod, "control"], "m", lazy.layout.grow_down()),
+	Key([mod, "control"], "k", lazy.layout.grow_up()),
+	Key([mod, "control"], "j", lazy.layout.grow_left()),
+	Key([mod, "control"], "l", lazy.layout.grow_right()),
+	Key([mod, "shift"], "n", lazy.layout.normalize()),
 
     # Switch window focus to other pane(s) of stack
     Key([mod], "space", lazy.layout.next()),
@@ -66,8 +75,8 @@ keys = [
     # Unsplit = 1 window displayed, like Max layout, but still with
     # multiple stack panes
     Key([mod, "shift"], "Return", lazy.layout.toggle_split()),
-    Key([mod], "Return", lazy.spawn("xfce4-terminal")),
-    Key([mod], "w", lazy.spawn("vivaldi-stable")),
+    Key([mod], "Return", lazy.spawn("alacritty")),
+    Key([mod], "w", lazy.spawn("firefox")),
     Key([], "Print", lazy.spawn("xfce4-screenshooter")),
 
     # Toggle between different layouts as defined below
