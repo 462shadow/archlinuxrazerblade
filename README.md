@@ -63,8 +63,31 @@ RazerFont:
 	$ cp RazerBlackwidow-Regular.ttf ~/.local/share/fonts/
 	$ fc-cache -fv ~/.local/share/fonts
 
+UHD 620 Graphics fix for slowness in kde:
 
-Benchmark link https://browser.geekbench.com/v4/cpu/13253832
+	/etc/modprobe.d/i915.conf
+	options i915 enable_guc=3
+	options i915 fastboot=1
+	options i915 enable_psr=1
+	options i915 enable_fbc=1
+
+	/etc/X11/xorg.conf.d/intel.conf
+	Section "Device"
+        Identifier      "Intel Graphics"
+        Driver          "intel"
+        Option          "AccelMethod" "sna"
+        Option          "TearFree" "true"
+        Option          "DRI" "3"
+	EndSection
+
+
+Better Touchpad:
+
+	Install libinput-touchpad from AUR
+	cp 30-touchpad.conf to /etc/X11/xorg.conf.d
+	edit 30-touchpad.conf in etc:
+		Option "AccelSpeed" "1.5"
+
 
 Links:
 
