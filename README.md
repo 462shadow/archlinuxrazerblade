@@ -3,6 +3,7 @@
 ![Screenshot](geekbench-1.png)
 
 
+
 razer:
 
 	## Must have headers installed
@@ -87,6 +88,10 @@ Better Touchpad:
 	cp 30-touchpad.conf to /etc/X11/xorg.conf.d
 	edit 30-touchpad.conf in etc:
 		Option "AccelSpeed" "1.5"
+
+
+cp 99-sysctl.conf from https://github.com/BlackArch/blackarch-installer/blob/master/data/etc/sysctl.d/99-sysctl.conf
+
 
 
 Links:
